@@ -5,6 +5,7 @@ import os
 import numpy as np
 import pandas as pd
 import glob
+from sklearn.model_selection import train_test_split
 
 
 data_dir = 'C:/Users/GUSTAVO TOVAR/Documents/GitHub/PDI/Imagenes/'
@@ -48,3 +49,20 @@ features = pd.DataFrame(data, columns=['Caracteristicas', 'Etiqueta'])
 features.to_csv('dataset.csv', index=False)
 
 print(features)
+
+
+x = np.array(features.Caracteristicas.tolist())
+y = np.array(features.Etiqueta.tolist())
+
+print(x.shape)
+print(y.shape)
+
+X = np.asarray(x).astype(dtype=np.float32) 
+y = np.asarray(y).astype(dtype=np.int32)
+
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, shuffle=True)
+print(len(X_train))
+print(len(y_train))
+
+print(y_train)
