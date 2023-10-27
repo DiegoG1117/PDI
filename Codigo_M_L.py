@@ -55,6 +55,7 @@ for i, sub_dir in enumerate(data_dir2):
 features = pd.DataFrame(data, columns=['Caracteristicas', 'Etiqueta'])
 
 # Guardar el DataFrame como un archivo CSV
-features.to_csv('dataset.csv', index=False)
+#features.to_csv('dataset.csv', index=False)
 
 print(features)
+
