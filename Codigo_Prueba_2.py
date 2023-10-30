@@ -8,6 +8,9 @@ import glob
 from sklearn.model_selection import train_test_split
 import pickle
 
+
+
+
 data_dir = 'C:/Users/GUSTAVO TOVAR/Documents/GitHub/PDI/Imagenes/'
 sub_dirs = os.listdir(data_dir)
 sub_dirs.sort()
